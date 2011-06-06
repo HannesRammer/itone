@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  muscle_id: 1
+  exercise_id: 1
+  muscle_type: MyString
+
+two:
+  muscle_id: 1
+  exercise_id: 1
+  muscle_type: MyString

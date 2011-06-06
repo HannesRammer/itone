@@ -1,0 +1,49 @@
+<h1>Listing muscles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>show</th>
+    <th>edit</th>
+    <th>destroy</th>
+    <th>pic id</th>
+    <th>exercise.length</th>
+    <th>#if length = 1</th>
+    <th>#if length < 6</th>
+    <th>#real_image</th>
+    <th>#sprite</th>
+  </tr>
+
+<%# @muscles.each do |muscle| %>
+  <% Muscle.sort_by_name.each do |muscle| %>
+      <tr>
+        <td><%= h muscle.name %></td>
+        <td><%= link_to 'Show', muscle %></td>
+        <td><%= link_to 'Edit', edit_muscle_path(muscle) %></td>
+        <td><%= link_to 'Destroy', muscle, :confirm => 'Are you sure?', :method => :delete %></td>
+        <td><%= muscle.picture_id %></td>
+        <td><%#= muscle.exercises.length %></td>
+        <td><%#= if muscle.exercises.length == 1
+                    muscle.exercises.first.name
+                end
+        %></td>
+        <td><%#
+            text = ""
+            if muscle.exercises.length < 6
+                    muscle.exercises.each do |s|
+                   # text << s.exercise_to_muscles[0].body_part.name
+                    text << s.name
+
+                    end
+                end%>
+                <%#= text %>
+        </td>
+        <td><%#=  image_tag("/images/muscles/#{muscle.picture_id}_#{muscle.clean_name}.png") if !muscle.picture_id.blank? %></td>
+        <td><%=  "<div class='#{muscle.clean_name}'> </div>" if !muscle.picture_id.blank? %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+
+<%= link_to 'New muscle', new_muscle_path %>

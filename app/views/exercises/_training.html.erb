@@ -1,0 +1,62 @@
+<div id="user_training">
+
+  <input type="text" id="reps" value="0"> Wiederholungen<br/>
+
+
+  <input type="text" id="single_rep" value="0">sekunden dauer pro Wiederholung<br/>
+  <input type="text" id="hold" value="0">Sekunden halten auf halbem weg<br/>
+  <input type="text" id="pause" value="0">Sekunden pause zwischen den einzelnen Übungen <br/>
+  <input type="text" id="vid" value="0">vid <br/>
+
+  <input type="hidden" id="running" value="false"> <br/>
+  <input type="hidden" id="allow_pause" value="false"> <br/>
+  <span onclick="set_training(10,6,0,120)">10-6-0-120</span>
+  <span onclick="set_training(12,10,2,150)">12-10-2-150</span> <br/>
+
+  wiederholungen
+  <div id="reps_div_e" style="background-color:#00ff00;height:20px;width:100px;">
+    <div id="reps_div_f" style="background-color:#ff0000;height:20px;width:0;position:relative;">
+    </div>
+
+  </div>
+
+  sekunden
+  <div id="single_rep_div_e" style="background-color:#00ff00;height:20px;width:100px;">
+    <div id="single_rep_div_f" style="background-color:#ff0000;height:20px;width:0;position:relative;">
+
+
+    </div>
+  </div>
+  hold
+  <div id="hold_div_e" style="background-color:#00ff00;height:20px;width:100px;">
+    <div id="hold_div_f" style="background-color:#ff0000;height:20px;width:0;position:relative;">
+      0
+
+    </div>
+  </div>
+
+  pause
+  <div id="pause_div_e" style="background-color:#00ff00;height:20px;width:100px;">
+    <div id="pause_div_f" style="background-color:#ff0000;height:20px;width:0;position:relative;">
+
+
+    </div>
+  </div>
+
+  <div id="start_training" onclick="if($('running').value == 'true' && $('training_text').innerHTML == ''){$('running').value = 'false';}if($('running').value == 'false'){startExercise(0)}">
+    <b>start</b>
+
+  </div>
+  <%#<div id="pause_training" onclick="if($('allow_pause').value == 'true'){toggle_running($('running'))}">
+
+
+  </div>%>
+  <div id="training_text"></div>
+  <img src="" id="training_pic" alt="">
+
+
+  <%#<video src="/videos/sus_output.ogg" width="480" height="360" id="htmlPlayer" controls preload autobuffer style="position: absolute; left: 130px; top: 199px;"></video>
+  %>
+
+
+</div>

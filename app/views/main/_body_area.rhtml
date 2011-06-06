@@ -1,0 +1,6 @@
+<map name="body_area" id="body_area">
+  <%= render :partial => "layouts/body_vars" %>
+  <%@body_vars.each do |vars|%>
+      <%="<area shape='#{vars[0]}' coords='#{vars[1]}' href='#' onMouseover='this.style.cursor=\"pointer\";hover(\"#{vars[2]}\")' onMouseout='hover(\"\")' onclick='selected(\"#{vars[2]}\")'/> "%>
+<%end%>
+</map>

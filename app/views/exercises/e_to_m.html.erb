@@ -1,0 +1,11 @@
+<h1>New exercise to muscle</h1>
+<% form_tag "/exercises/e_to_m" do  %>
+    <%= select_tag "exercises" , options_from_collection_for_select(@exercises, 'id', 'name')%>
+    <%= select_tag "muscles" , options_from_collection_for_select(@muscles, 'id', 'name')%>
+    <p>
+      <%= submit_tag 'Create' %>
+    </p>
+<% end %>
+
+<%= link_to 'Back', exercises_path %>
+

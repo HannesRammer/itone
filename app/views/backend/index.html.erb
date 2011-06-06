@@ -1,0 +1,28 @@
+<h1>Listing exercises</h1>
+       <% form_tag  do |f|%>
+    <%=backend_tag("exercise")%>
+
+    "description" <%=text_area("info","description", :cols => 130, :rows => 1)%>
+    "how_to" <%=text_area("info","how_to", :cols => 130, :rows => 1)%>
+   "how_not_to" <%=text_area("info","how_not_to", :cols => 130, :rows => 1)%>
+    "info" <%=text_area("info","info", :cols => 130, :rows => 1)%>   
+    <%=backend_tag("body_part")%>
+    <%=exercise_type_tag%>
+
+    <div id="primary_muscles">
+      <%=muscle_part_backend_tag("primary")%>
+    </div>
+
+    <div id="secondary_muscles">
+      <%=muscle_part_backend_tag("secondary")%>
+    </div>
+
+    <div id="antagonistic_muscles">
+      <%=muscle_part_backend_tag("antagonistic")%>
+    </div>
+
+
+ <%= submit_tag %>
+<br />
+    <%=@bp %>
+<%end%>

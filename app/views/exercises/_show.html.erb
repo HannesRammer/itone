@@ -1,0 +1,36 @@
+<div id="ex">
+  <%#= link_to_remote("Schließen", :url=>{:controller=>"main", :action=>"hide_exercise"}) %>
+
+  <div id="x_title">
+
+    <%= h @exercise.name %>
+  </div>
+  <div id="x_exercise_type">
+    <b>exercise_type:</b>
+    <%= h @exercise.exercise_type %>
+  </div>
+  <div style="position:relative;">
+    <div id="x_how_to">
+      <div id="ex_title">Was tun:</div>
+      <br/>
+      <%= h @exercise.how_to %>
+    </div>
+
+    <div id="x_how_not_to">
+      <div id="ex_title">Was NICHT tun:</div>
+      <br/>
+      <%= h @exercise.how_not_to %>
+    </div>
+
+    <div style="position:relative;">
+      <%= image_tag("exercises/#{clean_name(@exercise.name).capitalize }.jpg", :id=>"exercise_picture") %>
+
+    </div>
+    <div id="x_description">
+      <div id="ex_title">Beschreibung:</div>
+      <br/>
+      <%= h @exercise.description %>
+    </div>
+
+  </div>
+</div>

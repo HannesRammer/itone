@@ -1,0 +1,44 @@
+<div id="muscles" class="nice_outer_tab">
+  <div id="muscle_text_header" class="nice_inner_tab_js_hover"
+       onclick="toggleClass(this,'nice_inner_tab_js_hover','nice_inner_tab')">
+    Muskeln aller Übungen
+  </div>
+  <div id="muscle_text_option">
+
+
+    <div>
+      <ul>
+
+        <li id='m_primary_tab' <%= @p_muscles.blank? ? "class='first grey'" :"onclick='toggle_tab(\"m_primary\")' class='first'" %> >primary</li>
+        <li id='m_secondary_tab' <%= @s_muscles.blank? ? "class='grey'" : "class='#{'underline' if !@p_muscles.blank? }' onclick='toggle_tab(\"m_secondary\")'" %> >secondary</li>
+        <%#<li id='m_antagonist_tab' <%= @a_muscles.blank? ? "class='grey'" : "class='#{'underline' if !@p_muscles.blank? || !@s_muscles.blank? }' onclick='toggle_tab(\"m_antagonist\")'" %><%# >antagonist</li> %>
+
+      </ul>
+    </div>
+
+    <div id="m_primary">
+
+      <% @p_muscles.each do |s| %>
+          <div class="muscle_text_option" onclick="selected('<%=s.name%>');"
+               onmouseover="this.style.cursor='pointer';hover('<%=s.clean_name%>')">
+            <%= s.name %>
+          </div>
+      <% end %>          </div>
+    <div id="m_secondary" <%= @p_muscles.blank? && !@s_muscles.blank? ? "" : 'style="display:none"'%>>
+      <% @s_muscles.each do |s| %>
+          <div class="muscle_text_option" onclick="selected('<%=s.name%>');"
+               onmouseover="this.style.cursor='pointer';hover('<%=s.clean_name%>')">
+            <%= s.name %>
+          </div>
+      <% end %>
+    </div>
+    <%#<div id="m_antagonist" <%= @p_muscles.blank? && @s_muscles.blank? ? "" : 'style="display:none"'%><%#>
+      <% @a_muscles.each do |s| %>
+          <%#<div class="muscle_text_option" onclick="selected('<%=s.name%><%#');"
+               onmouseover="this.style.cursor='pointer';hover('<%=s.clean_name%><%#')">
+            <%= s.name %>
+         <%# </div>
+      <% end %>
+    <%#</div> %>
+  </div>
+</div>

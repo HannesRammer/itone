@@ -1,0 +1,170 @@
+<style type="text/css">
+
+
+
+
+<%#= main_color%>
+<%#= main_name%>
+
+.theme_<%= main_name%> {
+    /*background-color: <%#= main_color%>;*/
+    color: #000000;
+    background: -moz-linear-gradient(top, <%= main_color%> -31%, #fff 33%, #fff 37%, <%= main_color%> 176%, <%= main_color%> 145%);
+       background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<%= main_color%>), color-stop(0.4, white), color-stop(0.34, white), color-stop(0.99, <%= main_color%>), to(<%= main_color%>));
+       height:786px;
+}
+.theme_<%= main_name%> .nice_inner_tab {
+
+    box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+
+    background-color: #2b4c6b;
+    background: -moz-linear-gradient(top, #6b8298 0, #6b8298 50%, #2b4c6b 50%, #2b4c6b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6b8298), color-stop(0.5, #6b8298), color-stop(0.5, #2b4c6b), color-stop(1, #2b4c6b));
+
+    border: 1px solid #2b4c6b;
+    color: #fff;
+    padding: 7px 10px;
+    margin: 0;
+    text-align: center;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    -khtml-border-radius: 7px 7px 0px 0px;
+    -moz-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+
+}
+
+.theme_<%= main_name%> .nice_inner_tab_js_hover {
+    box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.6) inset;
+    -moz-box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.6) inset;
+    -webkit-box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.6) inset;
+
+    background-color: #2b4c6b;
+    background: -moz-linear-gradient(top, #6b8298 0, #6b8298 50%, #2b4c6b 50%, #2b4c6b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6b8298), color-stop(0.5, #6b8298), color-stop(0.5, #2b4c6b), color-stop(1, #2b4c6b));
+
+    border: 1px solid #2b4c6b;
+    color: #fff;
+    padding: 7px 10px;
+    margin: 0;
+    text-align: center;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    -khtml-border-radius: 7px 7px 0px 0px;
+    -moz-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+
+}
+
+.theme_<%= main_name%> .nice_outer_tab {
+    box-shadow: 0 0 31px 1px <%= main_color%>;
+    -moz-box-shadow: 0 0 31px 1px <%= main_color%>;
+    -webkit-box-shadow: 0 0 31px 1px <%= main_color%>;
+      border: solid 1px <%=main_color%>;
+  /*  background: -moz-linear-gradient(top, #fff 0, #fff 67%, #d2d2d2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.67, #fff), color-stop(1, #d2d2d2));
+    */
+}
+
+.theme_<%= main_name%> .nice_outer_tab:hover {
+    box-shadow: 0 0 31px 7px <%= main_color%>;
+    -moz-box-shadow: 0 0 31px 7px <%= main_color%>;
+    -webkit-box-shadow: 0 0 31px 7px <%= main_color%>;
+
+
+}
+
+.theme_<%= main_name%> .nice_inset_tab {
+    <%rgb = hex_to_rgb(main_color)%>
+    box-shadow: 0 0 31px 1px   rgba(<%= rgb[0]%>,<%= rgb[1]%>,<%= rgb[2]%>,0.1) inset;
+    -moz-box-shadow: 0 0 31px 1px rgba(<%= rgb[0]%>,<%= rgb[1]%>,<%= rgb[2]%>,0.1) inset;
+    -webkit-box-shadow: 0 0 31px 1px rgba(<%= rgb[0]%>,<%= rgb[1]%>,<%= rgb[2]%>,0.1) inset;
+      border: solid 1px <%=main_color%>;
+  /*  background: -moz-linear-gradient(top, #fff 0, #fff 67%, #d2d2d2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.67, #fff), color-stop(1, #d2d2d2));
+    */
+}
+
+.theme_<%= main_name%> .nice_inset_tab:hover {
+    box-shadow: 0 0 31px 7px <%= main_color%> ;
+    -moz-box-shadow: 0 0 31px 7px <%= main_color%>;
+    -webkit-box-shadow: 0 0 31px 7px <%= main_color%>;
+
+
+}
+
+.theme_<%= main_name%> #muscle_text_option {
+    background-color: #ebebeb; /*fallback color*/
+
+    background: -moz-linear-gradient(top, <%= main_color%> -31%, #fff 33%, #fff 37%, <%= main_color%> 176%, <%= main_color%> 145%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<%= main_color%>), color-stop(0.4, white), color-stop(0.34, white), color-stop(0.99, <%= main_color%>), to(<%= main_color%>));
+    padding: 10px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -khtml-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+     max-height:  355px;
+    overflow:auto;
+}
+
+.theme_<%= main_name%> .muscle_text_option {
+    background-color: rgba(255, 255, 153, 0);
+    -webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+.theme_<%= main_name%> .muscle_text_option:hover {
+    background-color: rgba(255, 255, 153, 1);
+
+}
+
+.theme_<%= main_name%> #exercises_text {
+    background-color: #ebebeb; /*fallback color*/
+    background: -moz-linear-gradient(top, <%= main_color%> -31%, #fff 33%, #fff 37%, <%= main_color%> 176%, <%= main_color%> 145%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<%= main_color%>), color-stop(0.4, white), color-stop(0.34, white), color-stop(0.99, <%= main_color%>), to(<%= main_color%>));
+    padding: 10px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -khtml-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    max-height:  355px;
+    overflow:auto;
+}
+.theme_<%= main_name%> .exercises_text {
+    background-color: rgba(255, 255, 153, 0);
+    -webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+.theme_<%= main_name%> .exercises_text:hover {
+    background-color: rgba(255, 255, 153, 1);
+}
+
+.theme_<%= main_name%> li {
+    border-left:1px solid <%= main_color%>;
+    width:43%;
+}
+
+.theme_<%= main_name%> .first{
+    border:none;
+}
+
+.theme_<%= main_name%> .grey {
+    border-bottom:1px solid <%= main_color%>;
+}
+
+.theme_<%= main_name%> .underline {
+    border-bottom:1px solid <%= main_color%>;
+}
+
+.theme_<%= main_name%> .show_training {
+    border:1px solid <%= main_color%>;
+    background: -moz-linear-gradient(top, <%= main_color%> -31%, #fff 33%, #fff 37%, <%= main_color%> 176%, <%= main_color%> 145%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<%= main_color%>), color-stop(0.4, white), color-stop(0.34, white), color-stop(0.99, <%= main_color%>), to(<%= main_color%>));
+    min-height:664px;
+    left:-1px;
+    position:absolute;
+    top:60px;
+    width:100%;
+    z-index:10;
+}
+</style>

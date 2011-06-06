@@ -1,0 +1,28 @@
+<%= render :partial => "layouts/style_vars" %>
+
+<FORM name="style_form">
+  <span onClick="back_style();"> back</span>
+  <SELECT name="style_options">
+    <OPTION <%= "SELECTED" if cookies["style"] == "dark" || !cookies["style"] %> value="dark">dark</option>
+      <% @style_vars.each do |style| %>
+          <%= "  <OPTION #{"SELECTED" if cookies["style"] == style[0] } value='#{style[0]}' style='background-color:#{style[1]};'>#{style[0]} </option>" %>
+      <% end %>
+    <OPTION <%= "SELECTED" if cookies["style"] == "white_yellow" %> value="white_yellow">white_yellow</option>
+    <OPTION <%= "SELECTED" if cookies["style"] == "white_blue" %> value="white_blue">white_blue</option>
+  </SELECT>
+  &nbsp;&nbsp;
+  <span onClick="next_style();"> next</span>
+  <INPUT type="button" name="ok" value="Ok!" onClick="change_style();">
+</FORM>
+
+
+
+
+<span id="style_vars">
+  <% @style_vars.each do |style| %>
+      <%= render :partial => "layouts/styles", :locals=>{:main_color=>style[1], :main_name=>style[0]} %>
+  <% end %>
+
+
+</span>
+

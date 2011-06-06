@@ -1,0 +1,96 @@
+<script type="text/javascript">
+  function cleanName(name){
+      p = name.gsub("ß", "ss").gsub(" ", "_").gsub('ä', 'ae').gsub('ö', 'oe').gsub('ü', 'ue').gsub('Ä', 'ae').gsub('Ö', 'oe').gsub('Ü', 'ue');
+            s = p.toLowerCase();
+      return s;
+  }
+    function hover(name) {
+
+        
+        setClass($("hover"),""+cleanName(name)+"_hover");
+
+                      /*
+        last_hover = $("last_hover").value;
+        if (name == "") {
+            //$("muscle_hover").innerHTML = "";//
+            if (last_hover != "" && $(last_hover + "_hover")) {
+                setClass($(last_hover + "_hover"), "hidden_muscle_pic");
+            }
+        }
+        else {
+            p = name.gsub("ß", "ss").gsub(" ", "_").gsub('ä', 'ae').gsub('ö', 'oe').gsub('ü', 'ue').gsub('Ä', 'ae').gsub('Ö', 'oe').gsub('Ü', 'ue');
+            s = p.toLowerCase();
+
+
+            $("last_hover").value = s;
+
+            if (last_hover != "" && $(last_hover + "_hover")) {
+                setClass($(last_hover + "_hover"), "hidden_muscle_pic");
+            }
+            if ($(s + "_hover")) {
+                setClass($(s + "_hover"), "multibild");
+            }
+
+            $("muscle_text_hover").innerHTML = name;
+        }*/
+    }
+    function selected(name) {
+        $("muscle_name").value = name;
+        document.forms["muscle_form"].onsubmit();
+    }
+    function selected_exercise(name) {
+        $("exercise_name").value = name;
+        document.forms["exercise_form"].onsubmit();
+    }
+</script>
+<div class="nav nice_outer_tab">
+  Wähle den Körperbereich den du Trainieren willst.
+    <% @body_parts.each do |part| %>
+        <%= link_to_remote(part.name, :url=>{ :controller => "main", :action=> "body_part", :name =>part.name}, :html=>{ :class=>"nice_inset_tab"}) %>
+
+    <% end %>   <br/>
+  Oder wähle ein Stichwort.
+  <% %w{Liegen Sitzen Bank Stab Gerät Seilzug Multipresse Kurzhantel Langhantel Gerät Freigewicht}.each do |part| %>
+        <%= link_to_remote(part, :url=>{ :controller => "main", :action=> "search_string",  :name =>part}, :html=>{ :class=>"nice_inset_tab"}) %>
+
+    <% end %>         <br/>
+
+  Oder klicke auf einen Muskel im Bild.
+  </div>
+<br/>                 <br/>
+
+<div style="position:relative">
+<%= render :partial => "main/body_area" %>
+
+<%= render :partial => "main/muscle" %>
+
+<%= image_tag("muskelman.png", :class=>'multibild') %>
+
+
+<%= render :partial => "main/body_part_selected" %>
+<%= render :partial => "main/muscle_selected" %>
+<%= render :partial => "main/exercise_selected" %>
+  <%#= render :partial => "main/muscle_hover" %>
+  <%= render :partial => "main/exercise" %>
+<div id="hover"></div>
+  <%= image_tag("blank.png", :class=>'multibild', :usemap=>"#body_area",:style=>"width:463px;height:460px;") %>
+</div>
+
+
+
+
+<input type="hidden" value="" id="selected_value">
+
+
+
+<% form_remote_tag :url => '/main/muscle', :html=>{:name=>"muscle_form"} do -%>
+    <div><%= hidden_field(:muscle, :name) %></div>
+<% end -%>
+
+<% form_remote_tag :url => '/main/exercise', :html=>{:name=>"exercise_form"} do -%>
+    <div><%= hidden_field(:exercise, :name) %></div>
+<% end -%>
+
+<div class="box nice_outer_tab">
+  <%= render :partial => "muscles" %>
+</div>

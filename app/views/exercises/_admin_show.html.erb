@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @exercise.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @exercise.description %>
+</p>
+
+<p>
+  <b>how to:</b>
+  <%=h @exercise.how_to%>
+</p>
+
+<p>
+  <b>how not to:</b>
+  <%=h @exercise.how_not_to%>
+</p>
+
+<p>
+  <b>info:</b>
+  <%=h @exercise.info%>
+</p>
+<p>
+  <b>exercise_type:</b>
+  <%=h @exercise.exercise_type%>
+</p>
+<%= image_tag("exercises/#{clean_name(@exercise.name)}.jpg" ,:size => "100x100") %>
+<%= image_tag("exercises/#{clean_name(@exercise.name)}1.jpg" ,:size => "100x100") %> 
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>

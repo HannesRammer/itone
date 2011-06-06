@@ -1,0 +1,357 @@
+@import "themes.css";
+
+body {
+
+}
+
+.nav {
+    position: relative;
+    padding: 5px;
+}
+
+img {
+    border: none;
+}
+
+#muscle_text {
+    left: 282px;
+    position: relative;
+    width: 500px;
+}
+
+#muscle_text_hover_div {
+    position: absolute;
+    width: 230px;
+}
+
+#body_part_text_selected_div {
+    left: 235px;
+    position: relative;
+    width: 230px;
+}
+
+#muscle_text_selected_div {
+    position: absolute;
+
+    width: 230px;
+}
+
+#exercise_text_selected_div {
+    left: 235px;
+    position: absolute;
+
+    width: 230px;
+}
+
+#muscle_text_hover {
+    background-color: rgba(153, 153, 255, 0.5);
+}
+
+#body_part_text_selected {
+    background-color: rgba(255, 255, 104, 0.5);
+
+}
+
+#muscle_text_selected {
+    background-color: rgba(153, 255, 153, 0.5);
+
+}
+
+#exercise_text_selected {
+    background-color: rgba(255, 153, 153, 0.5);
+
+}
+
+a {
+
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #fbd302;
+}
+
+.bild1 {
+    position: fixed;
+    top: 120px;
+    left: 900px;
+
+}
+
+.bild2 {
+    position: fixed;
+    top: 120px;
+    left: 40px;
+}
+
+.multibild {
+    left: 282px;
+    position: absolute;
+    top: -20px;
+}
+
+.multibild2 {
+
+    left: 20px;
+    position: absolute;
+    top: 20px;
+
+}
+
+.user_text {
+    top: 500px;
+    position: relative;
+    padding-bottom: 500px;
+}
+
+#user_selected {
+    margin: 50px;
+    position: relative;
+    width: 40%;
+}
+
+.text {
+    position: absolute;
+    width: 1000px;
+    top: 650px;
+    left: 250px;
+}
+
+#exercises {
+    left: 771px;
+    min-height: 6px;
+    position: absolute;
+    top: 0;
+    width: 300px;
+}
+
+#muscles {
+    min-height: 6px;
+    position: relative;
+    top: 0;
+    width: 250px;
+}
+
+table {
+    width: 100%;
+}
+
+#outer_container {
+    margin: 0 auto;
+    width: 1218px;
+    min-height: 725px;
+    position: relative;
+
+}
+
+#container {
+    margin: 0 auto;
+    width: 1024px;
+    min-height: 700px;
+
+}
+
+#ex {
+/* background-color: #333333;*/
+
+    position: relative;
+
+}
+
+#ex_title {
+    font-size: smaller;
+}
+
+#x_title {
+    font-family: monospace;
+    border: 1px solid #FFAAAA;
+
+}
+
+#x_description {
+    font-family: monospace;
+    position: relative;
+
+    padding: 1px 20px 20px 20px;
+    box-shadow: 8px 10px 26px rgba(151, 151, 255, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(151, 151, 255, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(151, 151, 255, 0.4) inset;
+}
+
+#x_how_to {
+    font-family: monospace;
+    padding: 1px 20px 20px 20px;
+    box-shadow: 8px 10px 26px rgba(151, 255, 151, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(151, 255, 151, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(151, 255, 151, 0.4) inset;
+}
+
+#x_how_not_to {
+    font-family: monospace;
+    padding: 1px 20px 20px;
+    min-height: 100px;
+    box-shadow: 8px 10px 26px rgba(255, 151, 151, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(255, 151, 151, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(255, 151, 151, 0.4) inset;
+}
+
+#x_info {
+    font-family: monospace;
+    padding: 1px 20px 20px;
+    box-shadow: 8px 10px 26px rgba(151, 151, 0, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(151, 151, 0, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(151, 151, 0, 0.4) inset;
+}
+
+#x_exercise_type {
+
+}
+
+.open_exercise {
+    background-color: rgba(255, 153, 153, 0.5);
+    border: 1px solid #FFFFFF;
+    float: right;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    right: -119px;
+    text-align: center;
+    top: 225px;
+    width: 20px;
+    z-index: 9;
+}
+
+.close_exercise {
+    background-color: rgba(255, 153, 153, 0.8);
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    float: right;
+    height: 200px;
+    position: relative;
+    right: -98px;
+    top: 125px;
+    width: 20px;
+    box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    z-index: 9;
+}
+
+.open_training {
+    background-color: rgba(153, 153, 255, 0.5);
+    border: 1px solid #FFFFFF;
+    float: right;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    right: -118px;
+    top: 25px;
+    width: 20px;
+    z-index: 9;
+    text-align: center;
+}
+
+.close_training {
+    background-color: rgba(153, 153, 255, 0.8);
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    float: right;
+    height: 200px;
+    position: relative;
+    right: -118px;
+    top: 25px;
+    width: 20px;
+    box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    z-index: 9;
+}
+
+.show_exercise {
+    border: 1px solid #FFFFFF;
+    bottom: 231px;
+    left: 1122px;
+    position: relative;
+    z-index: 10;
+    width: 500px;
+}
+
+.hidden_exercise {
+    height: 0px;
+    position: absolute;
+    left: 1105px;
+    width: 0px;
+    overflow: hidden;
+}
+
+.hidden_training {
+    height: 0px;
+    position: absolute;
+    left: 1105px;
+    width: 0px;
+    overflow: hidden;
+}
+
+.hidden_muscle_pic {
+    display: none;
+}
+
+#donation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.box {
+    position: absolute;
+    top: 620px;
+    width: 1024px;
+
+}
+
+ul {
+    bottom: 15px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+li {
+
+    float: left;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grey {
+    color: #cccccc;
+
+}
+
+#user_training {
+    position: absolute;
+    right: 200px;
+    top: 0px
+}
+
+#training_text {
+    font-size: xx-large;
+
+}
+
+#login_box {
+    position: absolute;
+    right: 200px;
+    top: 25px;
+}
+

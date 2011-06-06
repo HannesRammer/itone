@@ -1,0 +1,91 @@
+.theme_dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.theme_dark .nice_inner_tab {
+
+    box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+    -webkit-box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.4) inset;
+
+    background-color: rgba(0, 255, 255, 0.35);
+    margin-top: -30px;
+    padding: 7px 5px 5px;
+    text-align: center;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    -khtml-border-radius: 7px 7px 0px 0px;
+    -moz-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+
+}
+
+.theme_dark .nice_inner_tab_js_hover {
+    box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.6) inset;
+    -moz-box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.6) inset;
+    -webkit-box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.6) inset;
+
+    background-color: rgba(0, 255, 255, 0.35);
+    margin-top: -30px;
+    padding: 7px 5px 5px;
+    text-align: center;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    -khtml-border-radius: 7px 7px 0px 0px;
+    -moz-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+
+}
+
+.theme_dark .nice_outer_tab {
+    box-shadow: 0 0 31px 1px rgba(0, 255, 255, 0.4);
+    -moz-box-shadow: 0 0 31px 1px rgba(0, 255, 255, 0.4);
+    -webkit-box-shadow: 0 0 31px 1px rgba(0, 255, 255, 0.4);
+
+    background-color: #555555;
+}
+
+.theme_dark .nice_outer_tab:hover {
+    box-shadow: 0 0 31px 7px rgba(0, 255, 255, 0.4);
+    -moz-box-shadow: 0 0 31px 7px rgba(0, 255, 255, 0.4);
+    -webkit-box-shadow: 0 0 31px 7px rgba(0, 255, 255, 0.4);
+
+    background-color: #555555;
+}
+
+.theme_dark #muscle_text_option {
+    background-color: rgba(153, 255, 153, 0.5);
+    padding: 10px;
+}
+
+.theme_dark .muscle_text_option {
+    background-color: rgba(153, 255, 153, 0);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.theme_dark .muscle_text_option:hover {
+    background-color: rgba(153, 255, 153, 1);
+
+}
+
+.theme_dark #exercises_text {
+    background-color: rgba(255, 153, 153, 0.5);
+    padding: 10px;
+}
+
+.theme_dark .exercises_text {
+    background-color: rgba(255, 153, 153, 0);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.theme_dark .exercises_text:hover {
+    background-color: rgba(255, 153, 153, 1);
+
+}
+
+
+.theme_dark .box {
+    border: 1px solid #00FFFF;
+}
+

@@ -1,0 +1,35 @@
+<style type="text/css">
+#hover{
+
+    left: 282px;
+    position: absolute;
+    top: -20px;
+
+
+}
+
+<%muscles = Muscle.all_with_pic%>
+<%length = muscles.length%>
+<%muscles.each do |m|%>
+
+        <% i = m.picture_id - 1
+
+        x = ((i % 10) )
+        y = 0
+        if i >= 9
+        y = ((i / 10) )
+        end
+        %>
+
+
+<%= ".#{clean_name(m.name)}{ height: 460px;width: 463px;background: url('/images/muscles.png')  #{x * -463}px #{y * -460}px no-repeat;}"%>
+<%= ".#{clean_name(m.name)}_hover{ height: 460px;width: 463px;background: url('/images/muscles_hover.png')  #{x * -463}px #{y * -460}px no-repeat;}"%>
+<%= ".#{clean_name(m.name)}_selected{ height: 460px;width: 463px;background: url('/images/muscles_selected.png')  #{x * -463}px #{y * -460}px no-repeat;}"%>
+<%= ".#{clean_name(m.name)}_yellow{ height: 460px;width: 463px;background: url('/images/muscles_yellow.png')  #{x * -463}px #{y * -460}px no-repeat;}"%>
+
+<%end%>
+
+
+
+
+</style>
