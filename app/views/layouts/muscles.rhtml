@@ -1,50 +1,50 @@
 
  <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <meta http-equiv='content-type' content='text/html;charset=UTF-8'/>
   <title>ITone <%= controller_name %>/<%= controller.action_name %></title>
 
 </head>
-<%= stylesheet_link_tag("main.css") %>
-<%= stylesheet_link_tag("css3.css") %>
-<%#= stylesheet_link_tag "dev/screen", :media => "all" %>
- <%= render :partial => "layouts/muscle_styles" %>
+<%= stylesheet_link_tag('main.css') %>
+<%= stylesheet_link_tag('css3.css') %>
+<%#= stylesheet_link_tag 'dev/screen', :media => 'all' %>
+ <%= render :partial => 'layouts/muscle_styles' %>
 <%= javascript_include_tag :defaults %>
-<%#= javascript_include_tag "" %>
-<%#= javascript_include_tag "dropevents.js" %>
-<%#= javascript_include_tag "functions.js" %>
-<%= javascript_include_tag "modernizr-1.6.min" %>
-<% cookies["style"] ? style = cookies["style"] : style = "dark" %>
-<body id="body" class="theme_<%= style %>">
+<%#= javascript_include_tag '' %>
+<%#= javascript_include_tag 'dropevents.js' %>
+<%#= javascript_include_tag 'functions.js' %>
+<%= javascript_include_tag 'modernizr-1.6.min' %>
+<% cookies['style'] ? style = cookies['style'] : style = 'dark' %>
+<body id='body' class='theme_<%= style %>'>
 
 
-<div id="outer_container" class="nice_outer_tab">
-  <div id="login_box">
+<div id='outer_container' class='nice_outer_tab'>
+  <div id='login_box'>
 
   </div>
-  <div id="container"><br/>
-    <%= render :partial => "layouts/drop_style" %>  <br/>
+  <div id='container'><br/>
+    <%= render :partial => 'layouts/drop_style' %>  <br/>
 
 
-    <div id="exercise" class="hidden_exercise"></div>
+    <div id='exercise' class='hidden_exercise'></div>
 
     <%#= render(:partial => 'shared/header', :locals => {:cont_name => 'contact'}) %>
-    <div id="muscle"></div>
-    <div id="notice"><%= flash[:notice] %></div>
+    <div id='muscle'></div>
+    <div id='notice'><%= flash[:notice] %></div>
     <%= yield :layout %>
 
-    <%= render :partial => "layouts/donation" %>
+    <%= render :partial => 'layouts/donation' %>
 
   </div>
 </div>
-<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
   <tbody>
   <tr>
-    <td width="100%" align="center" style="padding:10px;">Copyright &copy; INC-M99.</td>
+    <td width='100%' align='center' style='padding:10px;'>Copyright &copy; INC-M99.</td>
   </tr>
   <tr>
-    <td width="100%" align="center" style="">
+    <td width='100%' align='center' style=''>
 
     </td>
   </tr>

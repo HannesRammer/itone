@@ -3,16 +3,10 @@ development:
   encoding: utf8
   database: db_60971479n6
   username: root
-  password: enter1
+  password: root
   host: localhost
 
 
-production:
-  adapter: mysql
-  encoding: utf8
-  database: db_60971479n6
-  username: user60971479n6
-  password: enter666
-  host:     zeta.railshoster.de
+
 
   

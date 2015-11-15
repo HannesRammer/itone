@@ -1,31 +1,31 @@
-<div id="user_selected">
-  <%= image_tag("muskelman.png", :class=>'multibild2') %>
+<div id='user_selected'>
+  <%= image_tag('muskelman.png', :class=>'multibild2') %>
   <% if logged_in? %>
       <%@x=[]%>
 
       <% utes = @current_user.user_to_exercises %>
       <% utes.each_with_index do |ute, i| %>
           <% exercise = ute.exercise %>
-          <%= user_muscle_pics(exercise.primary_muscles, "",4) %>
-          <%= user_muscle_pics(exercise.secondary_muscles, "",1) %>
+          <%= user_muscle_pics(exercise.primary_muscles, '',4) %>
+          <%= user_muscle_pics(exercise.secondary_muscles, '',1) %>
       <% end %>
-      <div class="user_text">
+      <div class='user_text'>
       <% utes.each_with_index do |ute, i| %>
           <% exercise = ute.exercise %>
 
-            <%@x<<"#{clean_name(exercise.name).capitalize}"%>
+            <% @x << "#{clean_name(exercise.name).capitalize}" %>
             <%= exercise.name %>
-            <%= link_to_remote(image_tag("icons/remove.png"),:html=>{:title => "Vom Trainingsplan entfernen"}, :url=>{:controller=>"main", :action=>"remove_exercise", :ute_id=>ute.id}, :confirm => 'Are you sure?') %>
+            <%= link_to_remote(image_tag('icons/remove.png'),:html=>{:title => 'Vom Trainingsplan entfernen'}, :url=>{:controller=>'main', :action=>'remove_exercise', :ute_id=>ute.id}, :confirm => 'Are you sure?') %>
             <% if i != 0 %>
-                <%= link_to_remote(image_tag("icons/up.png"),:html=>{:title => "In Liste nach oben verschieben"}, :url=>{:controller=>"main", :action=>"switch_exercise", :ute_id_1 =>ute.id, :ute_id_2 =>utes[i - 1].id, :user_id=>@current_user.id}) %>
+                <%= link_to_remote(image_tag('icons/up.png'),:html=>{:title => 'In Liste nach oben verschieben'}, :url=>{:controller=>'main', :action=>'switch_exercise', :ute_id_1 =>ute.id, :ute_id_2 =>utes[i - 1].id, :user_id=>@current_user.id}) %>
             <% end %>
             <% if !utes[i + 1].blank? %>
-                <%= link_to_remote(image_tag("icons/down.png"),:html=>{:title => "In Liste nach unten verschieben"}, :url=>{:controller=>"main", :action=>"switch_exercise", :ute_id_1  =>ute.id, :ute_id_2 =>utes[i + 1].id, :user_id=>@current_user.id}) %>
+                <%= link_to_remote(image_tag('icons/down.png'),:html=>{:title => 'In Liste nach unten verschieben'}, :url=>{:controller=>'main', :action=>'switch_exercise', :ute_id_1  =>ute.id, :ute_id_2 =>utes[i + 1].id, :user_id=>@current_user.id}) %>
             <% end %>
             <br/>
       <% end %>
         </div>
-      <script type="text/javascript">
+      <script type='text/javascript'>
           var trainingsArray = new Array();
           <% @x.each_with_index do |x,i| %>
             <%="trainingsArray[#{i}]='#{x}';"%>

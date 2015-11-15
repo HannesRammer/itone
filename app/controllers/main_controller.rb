@@ -26,9 +26,9 @@ class MainController < ApplicationController
       p name
       page["muscle_selected"].replace :partial=>"main/muscle_selected"
       page["exercises_text_header"].replace_html "Alle Übungen des #{params[:muscle]['name']}'s"
-      page["muscle_text_selected"].replace_html name
-      page["exercise_selected"].replace '<div id="exercise_selected"></div>'
-      page["exercises_text"].replace_html :partial=>"main/exercises_text"
+      page['muscle_text_selected'].replace_html name
+      page['exercise_selected'].replace '<div id="exercise_selected"></div>'
+      page['exercises_text'].replace_html :partial=> 'main/exercises_text'
     end
   end
 

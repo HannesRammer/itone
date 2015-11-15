@@ -1,13 +1,13 @@
 class Muscle < ActiveRecord::Base
-  has_many :exercise_to_muscles, :order=>"name asc"
+  has_many :exercise_to_muscles, :order=> 'name asc'
   has_many :body_part, :through => :exercise_to_muscles
 
-  has_many :exercise_to_muscles, :order=>"name asc"
+  has_many :exercise_to_muscles, :order=> 'name asc'
   has_many :exercises, :through => :exercise_to_muscles
-  named_scope :sort_by_name , :order=>"name asc"
-  named_scope :all_with_pic , :conditions=>"picture_id > 0"
+  named_scope :sort_by_name , :order=> 'name asc'
+  named_scope :all_with_pic , :conditions=>'picture_id > 0'
   def clean_name
-    self.name.downcase.gsub("ß","ss").gsub(" ","_").gsub('Ä','ae').gsub('ä','ae').gsub('ö','oe').gsub('ü','ue').gsub('Ü','ue').gsub('Ö','oe')
+    self.name.downcase.gsub('ß','ss').gsub(' ','_').gsub('Ä','ae').gsub('ä','ae').gsub('ö','oe').gsub('ü','ue').gsub('Ü','ue').gsub('Ö','oe')
   end
 
   def primary_exercises
@@ -30,7 +30,7 @@ class Muscle < ActiveRecord::Base
   end
 
   def sort_by_clean_name
-    Muscles
+    #Muscles
   end
 
 end

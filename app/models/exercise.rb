@@ -1,8 +1,8 @@
 class Exercise < ActiveRecord::Base
-  has_many :exercise_to_muscles, :order=>"muscle_type asc"  ,:conditions => "active = true"
+  has_many :exercise_to_muscles, :order=> 'muscle_type asc',:conditions => 'active = true'
   has_many :muscles, :through => :exercise_to_muscles
 
-  has_many :user_to_exercises, :order=>"id asc"
+  has_many :user_to_exercises, :order=> 'id asc'
   has_many :users, :through => :user_to_exercises
 
 
@@ -31,11 +31,11 @@ class Exercise < ActiveRecord::Base
   end
 
   def self.free_exercise
-    Exercise.find_all_by_exercise_type("free").sort!{|t1,t2|t1.name <=> t2.name}
+    Exercise.find_all_by_exercise_type('free').sort!{|t1,t2|t1.name <=> t2.name}
   end
 
   def self.non_free_exercise
-     Exercise.find_all_by_exercise_type("gerät").sort!{|t1,t2|t1.name <=> t2.name}
+     Exercise.find_all_by_exercise_type('gerät').sort!{|t1,t2|t1.name <=> t2.name}
   end
 
 

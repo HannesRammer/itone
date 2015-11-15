@@ -1,5 +1,5 @@
 class BodyPart < ActiveRecord::Base
-  has_many :exercise_to_muscles, :order=>"id asc"
+  has_many :exercise_to_muscles, :order=> 'id asc'
   has_many :muscles, :through => :exercise_to_muscles
 
   def primary_muscles
@@ -30,8 +30,8 @@ class BodyPart < ActiveRecord::Base
         s = ExerciseToMuscle.fabmtabpiami('secondary', self.id,o.id).length
       #  a = ExerciseToMuscle.fabmtabpiami('antagonistic', self.id,o.id).length
 
-     list << o if m_type == "primary" && p >= s #&& p >= a
-     list << o if m_type == "secondary" && s > p #&& s > a
+     list << o if m_type == 'primary' && p >= s #&& p >= a
+     list << o if m_type == 'secondary' && s > p #&& s > a
      #list << o if m_type == "antagonistic" && a > p && a > s
     end
      list.sort!{|t1,t2|t1.name <=> t2.name}

@@ -2,12 +2,12 @@
 module ApplicationHelper
  
   def muscle_pics(muscles, effect, strength = 3)
-    x=""
+    x=''
     muscles.each do |muscle|
-       x << "<div class='multibild #{muscle.clean_name}#{"_#{effect}" if !effect.blank?}' style='opacity:#{0.25 * strength};position:absolute;'></div>"
+       x << "<div class='multibild #{muscle.clean_name}#{"_#{effect}" unless effect.blank?}' style='opacity:#{0.25 * strength};position:absolute;'></div>"
       #x << image_tag("/images/muscles/#{muscle.picture_id}_#{muscle.clean_name}#{"_#{effect}" if !effect.blank?}.png", :style=>"opacity:#{0.25*strength}", :id=>"#{muscle.clean_name}_#{effect}", :class=>"multibild")
     end
-    return x
+    x
   end
 
   def user_muscle_pics(muscles, effect, strength = 3)
@@ -15,9 +15,9 @@ module ApplicationHelper
     muscles.each do |muscle|
 
       #x << image_tag("/images/muscles/#{muscle.picture_id}_#{muscle.clean_name}#{"_#{effect}" if !effect.blank?}.png", :class=>"multibild2", :style=>"opacity:#{0.25*strength}")
-      x << "<div class='multibild2 #{muscle.clean_name}#{"_#{effect}" if !effect.blank?}' style='opacity:#{0.25 * strength};position:absolute;'></div>"
+      x << "<div class='multibild2 #{muscle.clean_name}#{"_#{effect}" unless effect.blank?}' style='opacity:#{0.25 * strength};position:absolute;'></div>"
     end
-    return x
+    x
   end
 
   def clean_name(name)
@@ -25,12 +25,12 @@ module ApplicationHelper
   end
 
   def normal_name(name)
-    name.downcase.gsub("ss", "ß").gsub("_", " ").gsub('ae', 'ä').gsub('oe', 'ö').gsub('ue', 'ü')
+    name.downcase.gsub('ss', 'ß').gsub('_', ' ').gsub('ae', 'ä').gsub('oe', 'ö').gsub('ue', 'ü')
   end
 
   def vertical_text(text)
     text = clean_name(text)
-    nt = ""
+    nt = ''
     i = text.length
     i.times do |it|
       nt << "#{text[(it)..(it)]}<br/>"
@@ -58,17 +58,17 @@ module ApplicationHelper
 
   def give_dec(hex)
     value = 0
-    if (hex == "A")
+    if hex == "A"
       value = 10
-    elsif (hex == "B")
+    elsif hex == "B"
       value = 11
-    elsif (hex == "C")
+    elsif hex == "C"
       value = 12
-    elsif (hex == "D")
+    elsif hex == "D"
       value = 13
-    elsif (hex == "E")
+    elsif hex == "E"
       value = 14
-    elsif (hex == "F")
+    elsif hex == "F"
       value = 15
     else
       value = hex

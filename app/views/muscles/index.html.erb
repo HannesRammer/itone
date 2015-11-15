@@ -39,7 +39,7 @@
                 <%#= text %>
         </td>
         <td><%#=  image_tag("/images/muscles/#{muscle.picture_id}_#{muscle.clean_name}.png") if !muscle.picture_id.blank? %></td>
-        <td><%=  "<div class='#{muscle.clean_name}'> </div>" if !muscle.picture_id.blank? %></td>
+        <td><%= "<div class='#{muscle.clean_name}'> </div>" unless muscle.picture_id.blank? %></td>
       </tr>
   <% end %>
 </table>

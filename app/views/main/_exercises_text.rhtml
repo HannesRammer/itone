@@ -8,7 +8,7 @@
    <ul>
 
       <li id='e_primary_tab' <%= p_exercises.blank? ? "class='first grey'" :"onclick='toggle_tab(\"e_primary\")' class='first '"  %> >primary</li>
-      <li id='e_secondary_tab' <%= s_exercises.blank? ? "class='grey'" : "class='#{'underline' if !p_exercises.blank? }' onclick='toggle_tab(\"e_secondary\")'"  %> >secondary</li>
+      <li id='e_secondary_tab' <%= s_exercises.blank? ? "class='grey'" : "class='#{'underline' unless p_exercises.blank? }' onclick='toggle_tab(\"e_secondary\")'"  %> >secondary</li>
      <%# <li id='e_antagonist_tab' <%#= a_exercises.blank? ? "class='grey'" : "class='#{'underline' if !p_exercises.blank? || !s_exercises.blank? }' onclick='toggle_tab(\"e_antagonist\")'"  %> <%#>antagonist</li> %>
 
        </ul>
@@ -26,13 +26,13 @@
 </div>
 
 
-<div id="e_secondary" <%= p_exercises.blank? && !s_exercises.blank? ? "" : 'style="display:none"'%>>
+<div id="e_secondary" <%= p_exercises.blank? && !s_exercises.blank? ? '' : 'style="display:none"'%>>
   <% s_exercises.each do |s| %>
 
       <div class="exercises_text" onclick="selected_exercise('<%=s.name%>');" onmouseover="this.style.cursor='pointer';" title="<%= s.name %> anzeigen">
 
         <%= s.name %>
-        <%= link_to_remote(image_tag("icons/add.png"),:html=>{:title => "Zum Trainingsplan hinzufügen"}, :url=>{:controller=>"main", :action=>"add_exercise", :exercise=>s.id}) %>
+        <%= link_to_remote(image_tag('icons/add.png'),:html=>{:title => 'Zum Trainingsplan hinzufügen'}, :url=>{:controller=> 'main', :action=> 'add_exercise', :exercise=>s.id}) %>
         <%#= link_to_remote("show", :url=>{:controller=>"main", :action=>"show_exercise", :exercise=>s.id}) %>
       </div>
 

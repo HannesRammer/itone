@@ -10,7 +10,7 @@
       <ul>
 
         <li id='m_primary_tab' <%= @p_muscles.blank? ? "class='first grey'" :"onclick='toggle_tab(\"m_primary\")' class='first'" %> >primary</li>
-        <li id='m_secondary_tab' <%= @s_muscles.blank? ? "class='grey'" : "class='#{'underline' if !@p_muscles.blank? }' onclick='toggle_tab(\"m_secondary\")'" %> >secondary</li>
+        <li id='m_secondary_tab' <%= @s_muscles.blank? ? "class='grey'" : "class='#{'underline' unless @p_muscles.blank? }' onclick='toggle_tab(\"m_secondary\")'" %> >secondary</li>
         <%#<li id='m_antagonist_tab' <%= @a_muscles.blank? ? "class='grey'" : "class='#{'underline' if !@p_muscles.blank? || !@s_muscles.blank? }' onclick='toggle_tab(\"m_antagonist\")'" %><%# >antagonist</li> %>
 
       </ul>
